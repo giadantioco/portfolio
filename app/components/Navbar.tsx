@@ -1,0 +1,23 @@
+export default function Navbar() {
+  return (
+    <nav className="relative xl:sticky xl:top-0 z-50 w-full">
+      <div className="w-full flex items-center justify-between py-4 md:py-6 px-6 md:px-12 xl:px-20">
+        <a href="#home">
+          <img src="/logo.png" alt="Logo" className="w-auto antialiased" />
+        </a>
+
+        <div className="flex gap-2 sm:gap-5 lg:gap-6">
+          <a href="https://www.linkedin.com/in/giada-antioco/" target="_blank">
+            <img src="/linkedin.svg" alt="linkedin" />
+          </a>
+          <a href="#github">
+            <img src="/github.svg" alt="Github" />
+          </a>
+          <a href="#mail">
+            <img src="/email.svg" alt="email" />
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+}

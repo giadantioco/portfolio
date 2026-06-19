@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=DM+Mono:wght@300;400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-display: "Syne", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  /* Colors */
+  --color-off-white: #e9deff;
+  --color-pink: #ff7495;
+  --color-melon: #ffb674;
+  --color-white: #ffffff;
+  --color-off-black: #130d1a;
+  --color-violet: #1e0d34;
+}
+/*not working */
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* animation */
+@keyframes wander-one {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate3d(24px, -18px, 0) rotate(4deg);
+  }
+
+  50% {
+    transform: translate3d(-12px, 22px, 0) rotate(-3deg);
+  }
+
+  75% {
+    transform: translate3d(18px, 10px, 0) rotate(2deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+@keyframes wander-two {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate3d(-20px, 16px, 0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translate3d(18px, -24px, 0) rotate(5deg);
+  }
+
+  75% {
+    transform: translate3d(-14px, -10px, 0) rotate(-2deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+.animate-wander-one {
+  animation: wander-one 18s ease-in-out infinite;
+}
+
+.animate-wander-two {
+  animation: wander-two 22s ease-in-out infinite;
+}
+
+html,
+body {
+  background-color: var(--color-violet);
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased; /* Per Chrome, Safari, Edge su Mac */
+  -moz-osx-font-smoothing: grayscale; /* Per Firefox su Mac */
+  text-rendering: optimizeLegibility; /* Chiede al browser di privilegiare la nitidezza */
+}
+
+.mask-carousel {
+  /* Di base (mobile) nessuna maschera */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+@media (min-width: 768px) {
+  .mask-carousel {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 5%,
+      black 92%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 5%,
+      black 92%,
+      transparent 100%
+    );
+  }
+}
