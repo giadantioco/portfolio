@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { myProjects } from "./projects";
 
@@ -9,7 +9,7 @@ export default function Projects() {
 
   const loopedProjects = useMemo(
     () => [...myProjects, ...myProjects, ...myProjects],
-    []
+    [],
   );
 
   const getCardStep = () => {
@@ -17,11 +17,11 @@ export default function Projects() {
     if (!container) return 0;
 
     const firstCard = container.querySelector<HTMLElement>(
-      "[data-project-card]"
+      "[data-project-card]",
     );
     if (!firstCard) return container.clientWidth;
 
-    const gap = 24; // gap-6 in Tailwind
+    const gap = 24;
     return firstCard.offsetWidth + gap;
   };
 
