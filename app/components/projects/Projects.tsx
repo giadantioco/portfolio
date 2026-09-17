@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import { myProjects } from "./projects";
+import { myProjects } from "./projectsData";
 
 export default function Projects() {
   const scrollRef = useRef<HTMLDivElement>(null);
