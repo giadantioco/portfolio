@@ -18,14 +18,14 @@ export default function ProjectCard({
     <article
       data-project-card
       className="
-        shrink-0 snap-center
-        w-[85vw]
-        md:w-[50vw]
-        xl:w-[32vw]
-        2xl:w-[24vw]
-      "
+    shrink-0 snap-center
+    w-[85vw]
+    md:w-[50vw]
+    xl:w-[32vw]
+    2xl:w-[24vw]
+  "
     >
-      <div className="w-full mb-6 overflow-hidden rounded-xl shadow-lg">
+      <div className="w-full mb-6 rounded-xl shadow-lg">
         <img src={image} alt={name} className="w-full h-auto block" />
       </div>
 
