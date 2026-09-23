@@ -1,27 +1,27 @@
 export default function Hero() {
   return (
     <>
-      <section className="min-h-screen relative border-b border-melon/30 flex items-center justify-center py-16 xl:py-24 px-6">
+      <section className="min-h-[90vh] relative border-b border-melon/30 flex items-center justify-center py-10 xl:py-24 px-6">
         <div className="w-full max-w-5xl px-6 md:px-10">
           <div
             className="
-              flex flex-col xl:flex-row      
+              flex flex-col lg:flex-row      
               items-center justify-center 
-              gap-12 xl:gap-16                
-              text-center xl:text-left        
+              gap-12 lg:gap-16                
+              text-center lg:text-left        
             "
           >
             {/* Avatar */}
-            <div className="w-44 md:w-76 xl:w-90 shrink-0">
+            <div className="w-70 lg:w-83 shrink-0">
               <img src="/avatar.png" alt="Giada" className="w-full h-auto" />
             </div>
 
             {/* Text */}
-            <div className="max-w-xl flex flex-col items-center xl:items-start">
+            <div className="max-w-xl flex flex-col items-center lg:items-start">
               <h4 className="font-display text-melon text-2xl md:text-4xl lg:text-4xl mb-1 xl:mb-4">
                 Hi! I'm Giada,
               </h4>
-              <h1 className="font-display text-white font-bold text-5xl md:text-8xl lg:text-9xl mb-1 xl:mb-4">
+              <h1 className="font-display text-white font-bold text-5xl lg:text-8xl xl:text-9xl mb-1 xl:mb-4">
                 frontend <br />
                 developer
               </h1>
@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
 
           {/* Scroll Comp */}
-          <div className="mt-14 xl:mt-34 flex justify-center">
+          <div className="mt-6 xl:mt-34 flex justify-center">
             <div className="relative w-35 h-35 flex items-center justify-center">
               <img
                 src="/scroll_component.png"

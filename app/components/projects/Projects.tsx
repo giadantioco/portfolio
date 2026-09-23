@@ -78,7 +78,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="min-h-screen flex items-center border-b border-melon/30 py-40 overflow-hidden">
+    <section className="min-h-[90vh] flex items-center border-b border-melon/30 py-40">
       <div className="w-full">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
@@ -96,7 +96,7 @@ export default function Projects() {
           ref={scrollRef}
           onScroll={normalizeLoopPosition}
           className="
-            flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-10
+            flex gap-6 overflow-x-auto overflow-y-auto snap-x snap-mandatory no-scrollbar pb-10
             px-[7.5vw]
             md:px-[25vw]
             xl:px-[12vw]
