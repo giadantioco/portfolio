@@ -28,6 +28,7 @@ export default function SkillBadge({
       className={`
         ${sizeStyles[size]} 
         ${variantStyles[variant]} 
+        spin-glow
         border rounded-full font-display transition-all duration-300 
         cursor-default transform hover:-translate-y-1 select-none
       `}

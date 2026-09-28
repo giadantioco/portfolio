@@ -16,7 +16,7 @@ function Skills() {
   return (
     <section className="min-h-screen py-20 border-b border-melon/30 w-full flex items-center justify-center">
       <div className="w-full max-w-5xl px-6 md:px-10">
-        <div className="flex flex-col xl:flex-row items-center justify-center gap-12 xl:gap-16 ">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 xl:gap-16 ">
           {/* sx: TExt E CTA */}
           <div className="w-full md:w-1/2 text-center md:text-left flex flex-col mt-12 gap-6 items-center md:items-start">
             <div className="relative inline-block">

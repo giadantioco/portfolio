@@ -1,87 +1,17 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import { myProjects } from "./projectsData";
+import { myProjects, Project } from "./projectsData";
+import { useInfiniteCarousel } from "@/hooks/useInfiniteCarousel";
 
 export default function Projects() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const loopedProjects = useMemo(
-    () => [...myProjects, ...myProjects, ...myProjects],
-    [],
-  );
-
-  const getCardStep = () => {
-    const container = scrollRef.current;
-    if (!container) return 0;
-
-    const firstCard = container.querySelector<HTMLElement>(
-      "[data-project-card]",
-    );
-    if (!firstCard) return container.clientWidth;
-
-    const gap = 24;
-    return firstCard.offsetWidth + gap;
-  };
-
-  const scrollToMiddleCopy = (behavior: ScrollBehavior = "auto") => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    const cardStep = getCardStep();
-    const middleIndex = myProjects.length;
-
-    container.scrollTo({
-      left: cardStep * middleIndex,
-      behavior,
-    });
-  };
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => {
-      scrollToMiddleCopy("auto");
-    }, 50);
-
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  const normalizeLoopPosition = () => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    const cardStep = getCardStep();
-    const firstCopyEnd = cardStep * myProjects.length;
-    const secondCopyEnd = cardStep * myProjects.length * 2;
-
-    if (container.scrollLeft < firstCopyEnd * 0.5) {
-      container.scrollLeft += cardStep * myProjects.length;
-    }
-
-    if (container.scrollLeft > secondCopyEnd + firstCopyEnd * 0.5) {
-      container.scrollLeft -= cardStep * myProjects.length;
-    }
-  };
-
-  const scroll = (direction: "left" | "right") => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    normalizeLoopPosition();
-
-    const cardStep = getCardStep();
-
-    container.scrollBy({
-      left: direction === "left" ? -cardStep : cardStep,
-      behavior: "smooth",
-    });
-  };
+  const { scrollRef, loopedItems, scroll } = useInfiniteCarousel(myProjects);
 
   return (
-    <section className="min-h-[90vh] flex items-center border-b border-melon/30 py-40">
-      <div className="w-full">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
+    <section className="min-h-screen flex flex-col border-b border-melon/30">
+      <div className="flex-1 flex flex-col justify-center py-20">
+        <div className="mx-auto w-full max-w-wrap px-6">
+          <div className="text-center mb-15">
             <h2 className="font-mono text-off-white text-base md:text-lg flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
               Here are a few
               <span className="font-display text-melon text-4xl md-6 tracking-tighter leading-tight">
@@ -92,23 +22,27 @@ export default function Projects() {
           </div>
         </div>
 
-        <div
-          ref={scrollRef}
-          onScroll={normalizeLoopPosition}
-          className="
-            flex gap-6 overflow-x-auto overflow-y-auto snap-x snap-mandatory no-scrollbar pb-10
-            px-[7.5vw]
-            md:px-[25vw]
-            xl:px-[12vw]
-            2xl:px-[15vw]
-          "
-        >
-          {loopedProjects.map((project, index) => (
-            <ProjectCard key={`${project.id}-${index}`} {...project} />
-          ))}
+        <div className="w-full overflow-hidden">
+          <div
+            ref={scrollRef}
+            className="
+              flex
+              gap-6
+              overflow-x-auto
+              overflow-y-hidden
+              no-scrollbar
+              pb-10
+              px-[12.5vw]
+      md:px-0
+            "
+          >
+            {loopedItems.map((project: Project, index: number) => (
+              <ProjectCard key={`${project.id}-${index}`} {...project} />
+            ))}
+          </div>
         </div>
 
-        <div className="flex justify-center gap-6 mt-16">
+        <div className="flex justify-center gap-6">
           <button
             onClick={() => scroll("left")}
             aria-label="Previous project"

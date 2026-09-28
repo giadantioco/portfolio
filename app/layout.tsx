@@ -1,5 +1,5 @@
 import AnimatedBg from "./components/AnimatedBg";
-import "./index.css";
+import "./styles.css";
 
 export default function RootLayout({
   children,
@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="scroll-snap-type-y-mandatory">
         <AnimatedBg />
         <div className="relative z-10">{children}</div>
       </body>

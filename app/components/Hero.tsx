@@ -1,22 +1,14 @@
+"use client";
+
 export default function Hero() {
   return (
     <>
-      <section className="min-h-[90vh] relative border-b border-melon/30 flex items-center justify-center py-10 xl:py-24 px-6">
-        <div className="w-full max-w-5xl px-6 md:px-10">
-          <div
-            className="
-              flex flex-col lg:flex-row      
-              items-center justify-center 
-              gap-12 lg:gap-16                
-              text-center lg:text-left        
-            "
-          >
-            {/* Avatar */}
+      <section className="min-h-screen flex flex-col border-b border-melon/30">
+        <div className="m-auto w-full px-6 md:px-10 max-w-5xl">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 text-center lg:text-left">
             <div className="w-70 lg:w-83 shrink-0">
               <img src="/avatar.png" alt="Giada" className="w-full h-auto" />
             </div>
-
-            {/* Text */}
             <div className="max-w-xl flex flex-col items-center lg:items-start">
               <h4 className="font-display text-melon text-2xl md:text-4xl lg:text-4xl mb-1 xl:mb-4">
                 Hi! I'm Giada,
@@ -33,10 +25,16 @@ export default function Hero() {
               </p>
             </div>
           </div>
-
-          {/* Scroll Comp */}
-          <div className="mt-6 xl:mt-34 flex justify-center">
-            <div className="relative w-35 h-35 flex items-center justify-center">
+          <div className="mt-auto py-10 flex justify-center ">
+            <div
+              className="relative w-35 h-35 flex items-center justify-center cursor-pointer"
+              onClick={() => {
+                window.scrollBy({
+                  top: window.innerHeight,
+                  behavior: "smooth",
+                });
+              }}
+            >
               <img
                 src="/scroll_component.png"
                 alt=""
