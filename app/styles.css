@@ -13,6 +13,13 @@
   --color-off-black: #130d1a;
   --color-violet: #1e0d34;
 }
+
+.lottie-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
 /*not working */
 @utility no-scrollbar {
   -ms-overflow-style: none;

@@ -13,7 +13,7 @@ export default function ButtonCTA({ href, label }: ButtonCTAProps) {
       className="flex gap-2 items-center bg-pink text-off-black font-display font-semibold text-md tracking-tight px-4 py-3 rounded-full uppercase hover:bg-off-white transition-all duration-300 shadow-lg active:scale-95"
     >
       {label}
-      <img src="arrow.svg" alt={"arrow-icon"} className="w-3 h-3" />
+      <img src="arrow.svg" alt={"arrow-icon"} className="w-4 h-4" />
     </a>
   );
 }
