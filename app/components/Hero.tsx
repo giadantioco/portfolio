@@ -11,10 +11,16 @@ export default function Hero() {
       <section className="min-h-screen flex flex-col border-b border-melon/30">
         <div className="m-auto w-full px-6 md:px-10 max-w-5xl">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 text-center lg:text-left">
-            <div className="relative w-70 lg:w-83 shrink-0">
-              <div className="absolute w-70 lg:w-83 h-70 lg:h-83 shrink-0 border border-pink rounded-[39px] -top-3 -left-3"></div>
-              <img src="/avatar1.png" alt="Giada" className="w-full h-auto" />
-              <div className="absolute -top-10 -right-10 w-16 h-16">
+            <div className="relative mt-10 h-40 w-40 shrink-0 md:mt-0 md:h-83 md:w-83">
+              <div className="absolute -top-1.5 -left-1.5 h-40 w-40 rounded-[18.72px] border border-pink md:-top-3 md:-left-3 md:h-83 md:w-83 md:rounded-[40px]"></div>
+
+              <img
+                src="/avatar1.png"
+                alt="Giada"
+                className="h-full w-full object-cover"
+              />
+
+              <div className="absolute -top-10 -right-10 h-16 w-16">
                 <Lottie
                   ref={lottieRef}
                   src="/animations/sparkles_animation.json"
@@ -25,7 +31,8 @@ export default function Hero() {
             </div>
             <div className="max-w-xl flex flex-col items-center lg:items-start">
               <h4 className="font-display text-melon text-2xl md:text-4xl mb-1 xl:mb-4">
-                Hi! I'm Giada,
+                Hi! I'm Giada
+                <span className="test-wave ml-1.5">👋</span>
               </h4>
               <h1 className="font-display text-white font-bold text-5xl lg:text-8xl mb-1 xl:mb-4">
                 frontend <br />
