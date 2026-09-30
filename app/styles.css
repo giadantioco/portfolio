@@ -14,73 +14,6 @@
   --color-violet: #1e0d34;
 }
 
-.lottie-container {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-}
-
-/*not working */
-@utility no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-@keyframes wander-one {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-
-  25% {
-    transform: translate3d(24px, -18px, 0) rotate(4deg);
-  }
-
-  50% {
-    transform: translate3d(-12px, 22px, 0) rotate(-3deg);
-  }
-
-  75% {
-    transform: translate3d(18px, 10px, 0) rotate(2deg);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-}
-
-@keyframes wander-two {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-
-  25% {
-    transform: translate3d(-20px, 16px, 0) rotate(-3deg);
-  }
-
-  50% {
-    transform: translate3d(18px, -24px, 0) rotate(5deg);
-  }
-
-  75% {
-    transform: translate3d(-14px, -10px, 0) rotate(-2deg);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-}
-
-.animate-wander-one {
-  animation: wander-one 18s ease-in-out infinite;
-}
-
-.animate-wander-two {
-  animation: wander-two 22s ease-in-out infinite;
-}
-
 html,
 body {
   background-color: var(--color-violet);
@@ -92,27 +25,32 @@ body {
   text-rendering: optimizeLegibility; /* Chiede al browser di privilegiare la nitidezza */
 }
 
-.mask-carousel {
-  /* Di base (mobile) nessuna maschera */
-  -webkit-mask-image: none;
-  mask-image: none;
+@keyframes test-wave {
+  0%,
+  70%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(25deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  30% {
+    transform: rotate(25deg);
+  }
+
+  40% {
+    transform: rotate(0deg);
+  }
 }
 
-@media (min-width: 768px) {
-  .mask-carousel {
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      black 5%,
-      black 92%,
-      transparent 100%
-    );
-    mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      black 5%,
-      black 92%,
-      transparent 100%
-    );
-  }
+.test-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: test-wave 3s ease-in-out infinite;
 }

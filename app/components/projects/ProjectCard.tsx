@@ -17,31 +17,31 @@ export default function ProjectCard({
   return (
     <article
       data-project-card
-      className="
-        shrink-0 snap-start flex flex-col items-center justify-center
-        w-[80vw]
-        md:w-[50vw]
-        lg:w-[40vw]
-        xl:w-[24vw]"
+      className="flex w-full flex-col items-center justify-center"
     >
+      <h3 className="mb-6 text-center font-display text-3xl font-bold leading-none tracking-tight text-off-white md:text-2xl">
+        {name}
+      </h3>
+
       <div className="mb-6">
         <img
           src={image}
           alt={name}
-          className="w-[270px] h-[270px] md:w-full md:h-auto object-cover"
+          className="h-67.5 w-67.5 object-cover md:h-auto md:w-full"
         />
       </div>
-      <div className="flex flex-col items-center gap-4 w-full">
+
+      <div className="flex w-full flex-col items-center gap-4">
         <div className="flex flex-wrap justify-center gap-2">
           {tags.map((tag) => (
             <SkillBadge key={tag} label={tag} size="sm" variant="outline" />
           ))}
         </div>
 
-        <h3 className="font-display text-white font-bold text-3xl mb-6 md:text-2xl text-center tracking-tight leading-none">
-          {name}
-        </h3>
-        <ButtonCTA label="SEE ON GITHUB" href={github} />
+        <div className="flex">
+          <ButtonCTA label="LIVE" href={github} />
+          <ButtonCTA label="CODE" href={github} />
+        </div>
       </div>
     </article>
   );
