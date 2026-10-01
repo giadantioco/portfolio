@@ -12,15 +12,18 @@ export function AnimatedBg() {
         <Lottie
           ref={lottieRef}
           src="/animations/bg_animation.json"
-          loop
-          autoplay
-          rendererSettings={{
-            preserveAspectRatio: "xMidYMid slice",
-          }}
+          loop={true}
+          autoplay={true}
+          renderer="svg"
           style={{
             width: "100%",
             height: "100%",
             display: "block",
+          }}
+          rendererSettings={{
+            preserveAspectRatio: "xMidYMid slice",
+            progressiveLoad: true,
+            hideOnTransparent: true,
           }}
         />
       </div>

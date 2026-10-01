@@ -13,7 +13,7 @@ export default function Projects() {
   )?.project;
 
   return (
-    <section className="min-h-screen border-b border-melon/30">
+    <section className="min-h-screen border-b border-melon/30 overflow-hidden">
       <div className="flex min-h-screen flex-col justify-center py-20">
         {/* Heading */}
         <div className="mx-auto mb-15 w-full max-w-wrap px-6">
@@ -36,7 +36,7 @@ export default function Projects() {
         </div>
 
         {/* Carousel */}
-        <div className="relative mx-auto h-75 w-full md:h-90">
+        <div className="relative mx-auto h-75 w-full overflow-hidden md:h-90">
           {visibleItems.map(({ project, position }) => (
             <CarouselCard
               key={project.id}
@@ -56,8 +56,16 @@ export default function Projects() {
             </div>
 
             <div className="flex gap-3">
-              <ButtonCTA label="LIVE" href={activeProject.github} />
-              <ButtonCTA label="CODE" href={activeProject.github} />
+              <ButtonCTA
+                label="WEBSITE"
+                href={activeProject.github}
+                variant="primary"
+              />
+              <ButtonCTA
+                label="GITHUB"
+                href={activeProject.github}
+                variant="secondary"
+              />
             </div>
           </div>
         )}

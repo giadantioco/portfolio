@@ -8,42 +8,47 @@ export default function Hero() {
 
   return (
     <>
-      <section className="min-h-screen flex flex-col border-b border-melon/30">
+      <section className="min-h-[95vh] flex flex-col border-b border-melon/30">
         <div className="m-auto w-full px-6 md:px-10 max-w-5xl">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 text-center lg:text-left">
-            <div className="relative mt-10 h-40 w-40 shrink-0 md:mt-0 md:h-83 md:w-83">
+          <div className="flex flex-col lg:flex-row pt-20 items-center justify-center gap-12 lg:gap-16 text-center lg:text-left">
+            <div className="relative h-40 w-40 shrink-0 md:h-83 md:w-83">
               <div className="absolute -top-1.5 -left-1.5 h-40 w-40 rounded-[18.72px] border border-pink md:-top-3 md:-left-3 md:h-83 md:w-83 md:rounded-[40px]"></div>
-
               <img
-                src="/avatar1.png"
+                src="/profile_.gif"
                 alt="Giada"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover border border-off-white rounded-[18.72px] md:rounded-[40px]"
               />
-
-              <div className="absolute -top-10 -right-10 h-16 w-16">
+              <div className="absolute h-10 w-10 -top-8 -right-8 md:-top-10 md:-right-10 md:h-16 md:w-16">
                 <Lottie
                   ref={lottieRef}
                   src="/animations/sparkles_animation.json"
-                  loop
-                  autoplay
+                  loop={true}
+                  autoplay={true}
+                  renderer="svg"
+                  rendererSettings={{
+                    preserveAspectRatio: "xMidYMid slice",
+                    progressiveLoad: true,
+                    hideOnTransparent: true,
+                  }}
                 />
               </div>
             </div>
             <div className="max-w-xl flex flex-col items-center lg:items-start">
-              <h4 className="font-display text-melon text-2xl md:text-4xl mb-1 xl:mb-4">
+              <h4 className="font-display text-off-white text-2xl md:text-4xl mb-1 xl:mb-4">
                 Hi! I'm Giada
                 <span className="test-wave ml-1.5">👋</span>
               </h4>
-              <h1 className="font-display text-white font-bold text-5xl lg:text-8xl mb-1 xl:mb-4">
+              <h1 className="font-display text-melon font-bold text-5xl lg:text-8xl mb-1 xl:mb-4">
                 frontend <br />
                 developer
               </h1>
-              <p className="font-mono text-off-white mt-1 max-w-xl">
-                ready to dive into the world of frontend development. After a
-                couple of bootcamps and a lot of hours spent coding, I'm eager
-                to apply my skills in creating responsive and intuitive web
-                applications.
-              </p>
+              <div className="w-full lg:max-w-2xl max-w-95">
+                <p className="lg:text-left text-center font-mono text-off-white mt-1 max-w-xl">
+                  passionate about creating responsive, intuitive web
+                  experiences. Ready to bring ideas to life with clean and
+                  efficient code.
+                </p>
+              </div>
             </div>
           </div>
           <div className="mt-auto py-10 flex justify-center ">
@@ -57,14 +62,14 @@ export default function Hero() {
               }}
             >
               <img
-                src="/scroll_component.png"
-                alt=""
+                src="/scroll_component.svg"
+                alt="scroll-down"
                 className="animate-[spin_20s_linear_infinite]"
               />
               <img
                 src="/arrow_down.svg"
-                alt=""
-                className="absolute inset-0 m-auto w-4 h-4"
+                alt="arrow-down"
+                className="absolute inset-0 m-auto w-4 h-4 animate-pulse"
               />
             </div>
           </div>

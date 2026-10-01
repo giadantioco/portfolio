@@ -1,4 +1,4 @@
-import { AnimatedBg } from "@/components/atoms/AnimatedBg";
+import { AnimatedBg } from "@/components/AnimatedBg";
 import "./styles.css";
 
 export default function RootLayout({
