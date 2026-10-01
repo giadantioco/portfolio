@@ -54,3 +54,11 @@ body {
   transform-origin: 70% 70%;
   animation: test-wave 3s ease-in-out infinite;
 }
+
+.arrow-hover {
+  transition: filter 0.3s ease;
+}
+
+.arrow-hover:hover {
+  filter: brightness(1.5) saturate(1.2);
+}
