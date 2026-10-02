@@ -35,7 +35,7 @@ export default function CarouselCard({ project, position }: CarouselCardProps) {
   return (
     <motion.div
       ref={cardRef}
-      className="absolute left-1/2 w-[270px] -translate-x-1/2 md:w-[320px] lg:w-[360px]"
+      className="absolute left-1/2 w-67.5 -translate-x-1/2 md:w-[320px] lg:w-90 xl:w-105 2xl:w-150"
       animate={getCarouselPosition(position, cardWidth)}
       transition={{
         duration: 0.6,
