@@ -15,15 +15,8 @@ export function AnimatedBg() {
           loop={true}
           autoplay={true}
           renderer="svg"
-          style={{
-            width: "100%",
-            height: "100%",
-            display: "block",
-          }}
           rendererSettings={{
             preserveAspectRatio: "xMidYMid slice",
-            progressiveLoad: true,
-            hideOnTransparent: true,
           }}
         />
       </div>
