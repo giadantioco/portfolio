@@ -1,16 +1,24 @@
+"use client";
+
 import React from "react";
 import { SkillBadge, ButtonCTA } from "@/components/atoms";
+import { useRef, useState } from "react";
+import { Lottie } from "lottie-react";
 
 function Skills() {
+  const sparklesRef = useRef<any>(null);
+  const [isSparklesPaused, setIsSparklesPaused] = useState(false);
+
   const skills = [
     "HTML5",
     "CSS",
-    "REACT",
-    "SASS",
+    "SCSS/SASS",
     "JAVASCRIPT",
-    "NODE.JS",
-    "GIT",
-    "GITHUB",
+    "TYPESCRIPT",
+    "REACT",
+    "NEXT.JS",
+    "TAILWIND CSS",
+    "WORDPRESS",
   ];
 
   return (
@@ -27,13 +35,34 @@ function Skills() {
               <h2 className="font-display text-melon text-4xl tracking-tighter leading-tight">
                 Skills and Expertise
               </h2>
-              <img
-                src="/sparkles.svg"
-                alt="decoration"
-                className="hidden md:block absolute -top-12 -right-16 w-15 h-15 opacity-50"
-              />
+              <div className="absolute h-7 w-7 -top-3 right-13 md:-top-10 md:-right-10 md:h-16 md:w-16">
+                <Lottie
+                  ref={sparklesRef}
+                  src="/animations/sparkles_animation.json"
+                  loop={true}
+                  autoplay={true}
+                  className="brightness-0 invert opacity-60"
+                  renderer="svg"
+                  rendererSettings={{
+                    preserveAspectRatio: "xMidYMid slice",
+                    progressiveLoad: true,
+                    hideOnTransparent: true,
+                  }}
+                />
+                <button
+                  onClick={() => {
+                    if (isSparklesPaused) sparklesRef.current?.play();
+                    else sparklesRef.current?.pause();
+                    setIsSparklesPaused(!isSparklesPaused);
+                  }}
+                  className="sr-only"
+                  aria-label="Pause sparkles animation"
+                >
+                  {isSparklesPaused ? "Play" : "Pause"}
+                </button>
+              </div>
             </div>
-            <p className="font-mono text-off-white max-w-md mb-10 leading-relaxed ">
+            <p className="font-mono text-off-white md:text-xl text-[12px] mb-10 leading-relaxed max-w-md">
               As a Front-End Developer, I create responsive, user-friendly
               interfaces with a focus on clean, efficient code, utilizing agile
               methodologies and modern tools.

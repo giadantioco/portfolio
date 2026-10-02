@@ -36,7 +36,7 @@ export default function Projects() {
         </div>
 
         {/* Carousel */}
-        <div className="relative mx-auto h-75 w-full overflow-hidden md:h-90">
+        <div className="relative mx-auto h-75 w-full overflow-hidden md:h-80 lg:h-90 xl:h-105 2xl:h-150">
           {visibleItems.map(({ project, position }) => (
             <CarouselCard
               key={project.id}
