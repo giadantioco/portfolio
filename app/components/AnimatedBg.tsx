@@ -17,7 +17,7 @@ export function AnimatedBg() {
 
   return (
     <>
-      <div className="fixed w-full h-full transition duration-500 opacity-50 md:opacity-30">
+      <div className="fixed w-full h-full transition duration-500 opacity-60">
         <Lottie
           ref={lottieRef}
           src="/animations/bg_animation.json"

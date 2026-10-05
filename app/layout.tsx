@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="scroll-snap-type-y-mandatory">
+      <body className="scroll-snap-type-y-mandatory antialiased">
         <AnimatedBg />
         <div className="relative z-10">{children}</div>
       </body>
