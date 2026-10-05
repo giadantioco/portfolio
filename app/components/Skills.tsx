@@ -35,13 +35,13 @@ function Skills() {
               <h2 className="font-display text-melon text-4xl tracking-tighter leading-tight">
                 Skills and Expertise
               </h2>
-              <div className="absolute h-7 w-7 -top-3 right-13 md:-top-10 md:-right-10 md:h-16 md:w-16">
+              <div className="absolute h-7 w-7 top-6 -right-3 md:-top-2 md:-right-10 md:h-10 md:w-10">
                 <Lottie
                   ref={sparklesRef}
                   src="/animations/sparkles_animation.json"
                   loop={true}
                   autoplay={true}
-                  className="brightness-0 invert opacity-60"
+                  className="brightness-0 invert opacity-70"
                   renderer="svg"
                   rendererSettings={{
                     preserveAspectRatio: "xMidYMid slice",

@@ -7,7 +7,12 @@ export default function Footer() {
     <footer className="w-full bg-black py-6 border-t border-white/5">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="font-mono text-[10px] md:text-xs text-white/50 uppercase tracking-widest">
-          Created by <span className="text-white">Giada Antioco </span>
+          Created by{" "}
+          <span className="text-off-white lowercase">
+            <span className="text-melon">&lt;</span>
+            <a href="mailto:giada.antioco@gmail.com">giada.antioco@gmail.com</a>
+            <span className="text-melon">&gt;</span>
+          </span>
         </p>
 
         <p className="font-mono text-[10px] md:text-xs text-white/50 uppercase tracking-widest">
