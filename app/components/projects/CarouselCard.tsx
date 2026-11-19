@@ -45,7 +45,7 @@ export default function CarouselCard({ project, position }: CarouselCardProps) {
       <img
         src={project.image}
         alt={project.name}
-        className="h-auto w-full object-cover"
+        className="h-full w-full object-cover"
       />
     </motion.div>
   );

@@ -1,11 +1,11 @@
-import React from "react";
-import { SkillBadge, ButtonCTA } from "../atoms";
+import { SkillBadge, ButtonCTA } from "@/components/atoms";
 
 interface ProjectCardProps {
   name: string;
   tags: string[];
   image: string;
   github: string;
+  url: string;
 }
 
 export default function ProjectCard({
@@ -13,6 +13,7 @@ export default function ProjectCard({
   tags,
   image,
   github,
+  url,
 }: ProjectCardProps) {
   return (
     <article
@@ -39,7 +40,7 @@ export default function ProjectCard({
         </div>
 
         <div className="flex">
-          <ButtonCTA label="LIVE" href={github} />
+          <ButtonCTA label="LIVE" href={url} />
           <ButtonCTA label="CODE" href={github} />
         </div>
       </div>

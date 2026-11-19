@@ -65,16 +65,20 @@ export default function Projects() {
             </div>
 
             <div className="flex gap-3">
-              <ButtonCTA
-                label="WEBSITE"
-                href={activeProject.github}
-                variant="primary"
-              />
-              <ButtonCTA
-                label="GITHUB"
-                href={activeProject.github}
-                variant="secondary"
-              />
+              {activeProject.url && (
+                <ButtonCTA
+                  label="WEBSITE"
+                  href={activeProject.url}
+                  variant="primary"
+                />
+              )}
+              {activeProject.github && (
+                <ButtonCTA
+                  label="GITHUB"
+                  href={activeProject.github}
+                  variant="secondary"
+                />
+              )}
             </div>
           </div>
         )}
@@ -85,14 +89,14 @@ export default function Projects() {
           style={{ top: "53%" }}
         >
           <button
-            onClick={() => scroll("right")}
+            onClick={() => scroll("left")}
             aria-label="Next project"
             className="p-4 border bg-violet/80 hover:violet border-pink rounded-[10px] hover:border-melon transition-colors"
           >
             <img src="/Polygon.svg" alt="arrow" className="w-3 h-3" />
           </button>
           <button
-            onClick={() => scroll("left")}
+            onClick={() => scroll("right")}
             aria-label="Next project"
             className="p-4 border bg-violet/80 hover:violet border-pink rounded-[10px] hover:border-melon transition-colors"
           >
@@ -104,7 +108,7 @@ export default function Projects() {
           </button>
         </div>
         {/* Dots indicator */}
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex  justify-center gap-3 mt-8">
           {myProjects.map((project, index) => {
             const isActive = index === activeIndex;
             return (

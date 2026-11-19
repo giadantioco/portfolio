@@ -3,26 +3,25 @@ export interface Project {
   name: string;
   tags: string[];
   image: string;
-  github: string;
-  vercel?: string;
+  github?: string;
+  url?: string;
 }
 
 export const myProjects: Project[] = [
   {
     id: 1,
-    name: "Pricing App",
+    name: "Jackpot Play",
     tags: ["HTML", "CSS", "JS"],
-    image: "/pricingapp.svg",
-    github: "#",
-    vercel: "",
+    image: "/jackpot.png",
+    url: "https://jackpotplay.fun/",
   },
   {
     id: 2,
     name: "CRM",
     tags: ["HTML", "CSS", "JS"],
-    image: "/crmapp.svg",
+    image: "/weatherapp.png",
     github: "#",
-    vercel: "",
+    url: "3",
   },
   {
     id: 3,
@@ -30,7 +29,7 @@ export const myProjects: Project[] = [
     tags: ["HTML", "CSS", "JS"],
     image: "/weatherapp.svg",
     github: "#",
-    vercel: "",
+    url: "",
   },
   {
     id: 4,
@@ -38,7 +37,7 @@ export const myProjects: Project[] = [
     tags: ["HTML", "CSS", "JS"],
     image: "/pricingapp.svg",
     github: "#",
-    vercel: "",
+    url: "",
   },
   {
     id: 5,
@@ -46,7 +45,7 @@ export const myProjects: Project[] = [
     tags: ["HTML", "CSS", "JS"],
     image: "/pricingapp.svg",
     github: "#",
-    vercel: "",
+    url: "",
   },
   {
     id: 6,
@@ -54,6 +53,6 @@ export const myProjects: Project[] = [
     tags: ["HTML", "CSS", "JS"],
     image: "/pricingapp.svg",
     github: "#",
-    vercel: "",
+    url: "",
   },
 ];
