@@ -1,6 +1,7 @@
 export interface Project {
   id: number;
   name: string;
+  description: string;
   tags: string[];
   image: string;
   github?: string;
@@ -11,48 +12,51 @@ export const myProjects: Project[] = [
   {
     id: 1,
     name: "Jackpot Play",
-    tags: ["HTML", "CSS", "JS"],
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    tags: ["Next.js", "Typescript", "Tailwind"],
     image: "/jackpot.png",
     url: "https://jackpotplay.fun/",
   },
   {
     id: 2,
-    name: "CRM",
-    tags: ["HTML", "CSS", "JS"],
-    image: "/weatherapp.png",
-    github: "#",
-    url: "3",
+    name: "Storyteller",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    tags: ["Next.js", "Typescript", "Tailwind", "Gemini API"],
+    image: "/storyteller.png",
+    github: "https://github.com/giadantioco/ai-story-teller",
+    url: "https://storyteller-by-jade.vercel.app/",
   },
   {
     id: 3,
     name: "Weather App",
-    tags: ["HTML", "CSS", "JS"],
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    tags: ["Next.js", "Typescript", "SCSS"],
     image: "/weatherapp.svg",
-    github: "#",
-    url: "",
+    github: "https://github.com/giadantioco/weather-app",
+    url: "https://weather-by-jade.vercel.app/",
   },
   {
     id: 4,
-    name: "Pricing App",
-    tags: ["HTML", "CSS", "JS"],
-    image: "/pricingapp.svg",
-    github: "#",
-    url: "",
+    name: "CRM",
+    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    tags: ["Next.js", "Typescript", "Tailwind"],
+    image: "/crm.png",
+    github: "https://github.com/giadantioco/cybernext",
   },
-  {
-    id: 5,
-    name: "Pricing App",
-    tags: ["HTML", "CSS", "JS"],
-    image: "/pricingapp.svg",
-    github: "#",
-    url: "",
-  },
-  {
-    id: 6,
-    name: "Pricing App",
-    tags: ["HTML", "CSS", "JS"],
-    image: "/pricingapp.svg",
-    github: "#",
-    url: "",
-  },
+  // {
+  //   id: 5,
+  //   name: "Pricing App",
+  //   tags: ["HTML", "CSS", "JS"],
+  //   image: "/pricingapp.svg",
+  //   github: "#",
+  //   url: "",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Pricing App",
+  //   tags: ["HTML", "CSS", "JS"],
+  //   image: "/hmp.png",
+  //   github: "#",
+  //   url: "",
+  // },
 ];
