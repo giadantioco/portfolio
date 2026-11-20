@@ -3,22 +3,11 @@
 import { SkillBadge, ButtonCTA } from "@/components/atoms";
 import { useRef, useState } from "react";
 import { Lottie } from "lottie-react";
+import { SKILLS_SECTION } from "./projects/skillsData";
 
 function Skills() {
   const sparklesRef = useRef<any>(null);
   const [isSparklesPaused, setIsSparklesPaused] = useState(false);
-
-  const skills = [
-    "HTML5",
-    "CSS",
-    "SCSS/SASS",
-    "JAVASCRIPT",
-    "TYPESCRIPT",
-    "REACT",
-    "NEXT.JS",
-    "TAILWIND CSS",
-    "WORDPRESS",
-  ];
 
   return (
     <section className="min-h-screen py-20 border-b border-melon/30 w-full flex items-center justify-center">
@@ -69,8 +58,8 @@ function Skills() {
             <ButtonCTA label="Download my CV" href="*" />
           </div>
           {/* dx SKILLS */}
-          <div className="w-full md:w-1/2 flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-6">
-            {skills.map((skill) => (
+          <div className="w-full md:w-1/2 flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-6 uppercase">
+            {SKILLS_SECTION.map((skill) => (
               <SkillBadge
                 key={skill}
                 label={skill}
