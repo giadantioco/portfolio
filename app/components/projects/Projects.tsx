@@ -22,7 +22,7 @@ export default function Projects() {
       <div className="flex min-h-screen flex-col justify-center py-20">
         {/* Heading */}
         <div className="mx-auto mb-15 w-full max-w-wrap px-6">
-          <div className="text-center">
+          <div className="text-center" translate="no">
             <h2 className="flex flex-col items-center justify-center gap-2 font-mono text-base text-off-white md:flex-row md:gap-4 md:text-lg">
               Here are a few
               <span className="font-display text-4xl leading-tight tracking-tighter text-melon md:text-6xl">
@@ -35,7 +35,10 @@ export default function Projects() {
 
         {/* Project title */}
         <div className="mb-6 h-8 text-center">
-          <h3 className="font-display text-3xl font-bold leading-none tracking-tight text-off-white md:text-2xl">
+          <h3
+            translate="no"
+            className="font-display text-3xl font-bold leading-none tracking-tight text-off-white md:text-2xl"
+          >
             {activeProject?.name}
           </h3>
         </div>

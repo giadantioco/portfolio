@@ -23,6 +23,7 @@ export default function SkillBadge({
 
   return (
     <div
+      translate="no"
       className={`
         ${sizeStyles[size]} 
         ${variantStyles[variant]} 

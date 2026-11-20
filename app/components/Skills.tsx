@@ -15,7 +15,7 @@ function Skills() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 xl:gap-16 ">
           {/* sx: TExt E CTA */}
           <div className="w-full md:w-1/2 text-center md:text-left flex flex-col mt-12 gap-6 items-center md:items-start">
-            <div className="relative inline-block">
+            <div translate="no" className="relative inline-block">
               <p className="font-mono text-off-white mb-3 tracking-widest">
                 Here are my
               </p>

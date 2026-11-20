@@ -46,10 +46,13 @@ export default function Hero() {
           </div>
           <div className="max-w-xl flex flex-col items-center lg:items-start">
             <h4 className="font-display text-off-white text-xl md:text-4xl mb-1 xl:mb-4">
-              Hi! I'm Giada
-              <span className="test-wave ml-1.5">👋</span>
+              Hi! I'm Giada,
+              {/* <span className="test-wave ml-1.5">👋</span> */}
             </h4>
-            <h1 className="font-display text-melon font-bold text-5xl lg:text-8xl mb-1 xl:mb-4">
+            <h1
+              className="font-display text-melon font-bold text-5xl lg:text-8xl mb-1 xl:mb-4"
+              translate="no"
+            >
               frontend <br />
               developer
             </h1>
