@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { SkillBadge, ButtonCTA } from "@/components/atoms";
 import { useRef, useState } from "react";
 import { Lottie } from "lottie-react";

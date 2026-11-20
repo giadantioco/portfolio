@@ -12,7 +12,8 @@ export const myProjects: Project[] = [
   {
     id: 1,
     name: "Jackpot Play",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
     tags: ["Next.js", "Typescript", "Tailwind"],
     image: "/jackpot.png",
     url: "https://jackpotplay.fun/",
@@ -20,7 +21,8 @@ export const myProjects: Project[] = [
   {
     id: 2,
     name: "Storyteller",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
     tags: ["Next.js", "Typescript", "Tailwind", "Gemini API"],
     image: "/storyteller.png",
     github: "https://github.com/giadantioco/ai-story-teller",
@@ -29,7 +31,8 @@ export const myProjects: Project[] = [
   {
     id: 3,
     name: "Weather App",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
     tags: ["Next.js", "Typescript", "SCSS"],
     image: "/weatherapp.svg",
     github: "https://github.com/giadantioco/weather-app",
@@ -38,19 +41,22 @@ export const myProjects: Project[] = [
   {
     id: 4,
     name: "CRM",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
     tags: ["Next.js", "Typescript", "Tailwind"],
     image: "/crm.png",
     github: "https://github.com/giadantioco/cybernext",
   },
-  // {
-  //   id: 5,
-  //   name: "Pricing App",
-  //   tags: ["HTML", "CSS", "JS"],
-  //   image: "/pricingapp.svg",
-  //   github: "#",
-  //   url: "",
-  // },
+  {
+    id: 5,
+    name: "Pricing App",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed sed excepteur, duis laborum. Aliquip ipsum pariatur sit voluptate exercitation, irure nisi sed ut officia sint consectetur.",
+    tags: ["HTML", "CSS", "JS"],
+    image: "/pricingapp.svg",
+    github: "#",
+    url: "",
+  },
   // {
   //   id: 6,
   //   name: "Pricing App",

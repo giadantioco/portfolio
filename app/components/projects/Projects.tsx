@@ -53,17 +53,43 @@ export default function Projects() {
               position={position}
             />
           ))}
+
+          {/* Navigation */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 justify-between hidden md:flex md:w-120 lg:w-150 xl:w-200 2xl:w-250 z-999">
+            <button
+              onClick={() => scroll("left")}
+              aria-label="Next project"
+              className="p-4 border bg-violet/80 hover:violet border-pink rounded-[10px] hover:border-melon transition-colors"
+            >
+              <img src="/Polygon.svg" alt="arrow" className="w-3 h-3" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              aria-label="Next project"
+              className="p-4 border bg-violet/80 hover:violet border-pink rounded-[10px] hover:border-melon transition-colors"
+            >
+              <img
+                src="/Polygon.svg"
+                alt="arrow"
+                className="w-3 h-3 transform rotate-180"
+              />
+            </button>
+          </div>
         </div>
 
-        {/* Active project details */}
+        {/* Active project tags */}
         {activeProject && (
           <div className="flex flex-col items-center gap-4">
+            {/* Active project caption */}
+            <p className="font-mono text-off-white text-[12px] max-w-md text-center px-6">
+              {activeProject.description}
+            </p>
             <div className="flex flex-wrap justify-center gap-2">
               {activeProject.tags.map((tag) => (
                 <SkillBadge key={tag} label={tag} size="sm" variant="outline" />
               ))}
             </div>
-
+            {/* Active project urls */}
             <div className="flex gap-3">
               {activeProject.url && (
                 <ButtonCTA
@@ -83,30 +109,6 @@ export default function Projects() {
           </div>
         )}
 
-        {/* Navigation */}
-        <div
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 justify-between hidden md:flex md:w-120 lg:w-150 xl:w-200 2xl:w-250 z-999"
-          style={{ top: "53%" }}
-        >
-          <button
-            onClick={() => scroll("left")}
-            aria-label="Next project"
-            className="p-4 border bg-violet/80 hover:violet border-pink rounded-[10px] hover:border-melon transition-colors"
-          >
-            <img src="/Polygon.svg" alt="arrow" className="w-3 h-3" />
-          </button>
-          <button
-            onClick={() => scroll("right")}
-            aria-label="Next project"
-            className="p-4 border bg-violet/80 hover:violet border-pink rounded-[10px] hover:border-melon transition-colors"
-          >
-            <img
-              src="/Polygon.svg"
-              alt="arrow"
-              className="w-3 h-3 transform rotate-180"
-            />
-          </button>
-        </div>
         {/* Dots indicator */}
         <div className="flex  justify-center gap-3 mt-8">
           {myProjects.map((project, index) => {
