@@ -16,7 +16,7 @@ export default function Footer() {
         </p>
 
         <p className="font-mono text-[10px] md:text-xs text-white/50 uppercase tracking-widest">
-          © {currentYear} — All rights reserved
+          {currentYear} — All rights reserved
         </p>
       </div>
     </footer>
