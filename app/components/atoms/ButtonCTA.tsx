@@ -4,17 +4,17 @@ interface ButtonCTAProps {
   variant?: "primary" | "secondary";
 }
 
+const VARIANT_STYLES = {
+  primary: "bg-pink text-violet border-transparent hover:border-melon",
+  secondary: "bg-violet text-pink border-pink hover:border-melon",
+} as const;
+
 export default function ButtonCTA({
   href,
   label,
   variant = "primary",
 }: ButtonCTAProps) {
   const isEmail = href.startsWith("mailto:");
-
-  const styles =
-    variant === "primary"
-      ? "bg-pink text-violet hover:border hover:border-melon"
-      : "bg-violet text-pink border border-pink hover:border-melon";
 
   const arrowDefault =
     variant === "primary" ? "/north_east_violet.svg" : "/north_east_pink.svg";
@@ -24,7 +24,7 @@ export default function ButtonCTA({
       href={href}
       target={isEmail ? undefined : "_blank"}
       rel={isEmail ? undefined : "noopener noreferrer"}
-      className={`group inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-[10px] font-display font-semibold text-base tracking-wide uppercase shadow-lg transition-all duration-200 active:scale-95 ${styles}`}
+      className={`group inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-[10px] border font-display font-semibold text-base tracking-wide uppercase shadow-lg transition-[color,background-color,border-color,scale] duration-200 active:scale-95 ${VARIANT_STYLES[variant]}`}
     >
       <span>{label}</span>
 

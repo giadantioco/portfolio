@@ -55,7 +55,10 @@ function Skills() {
               interfaces with a focus on clean, efficient code, utilizing agile
               methodologies and modern tools.
             </p>
-            <ButtonCTA label="Download my CV" href="*" />
+            <ButtonCTA
+              label="Download my CV"
+              href="https://drive.google.com/drive/folders/1bsARYeE9WuNqT77eIs0eOAqD20uj3tzI?usp=sharing"
+            />
           </div>
           {/* dx SKILLS */}
           <div className="w-full md:w-1/2 flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-6 uppercase">

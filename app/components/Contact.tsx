@@ -30,7 +30,7 @@ export default function Contact() {
         </div>
       </h1>
 
-      <ButtonCTA label="Contact me" href="mailto:giada.antiooco@gmail.com" />
+      <ButtonCTA label="Contact me" href="mailto:giada.antioco@gmail.com" />
     </section>
   );
 }
